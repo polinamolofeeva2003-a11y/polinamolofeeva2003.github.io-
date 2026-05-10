@@ -69,6 +69,7 @@
             align-items: center;
             justify-content: center;
             margin-bottom: 40px;
+            position: relative; /* Важно для позиционирования имени */
         }
 
         /* Фотография */
@@ -80,19 +81,36 @@
             box-shadow: 0 0 10px rgba(0,0,0,0.3);
             border: 2px solid #FFF; /* Тонкая белая обводка */
             margin-right: 20px;
+            position: relative; /* Важен для эффекта перекрытия */
+            z-index: 1; /* Чуть меньше, чем у имени */
         }
 
-        /* Имя автора (над фотографией) */
+        /* Имя автора (прямо под фотографией, частично перекрывает её) */
         .author-name {
             font-family: 'Brush Script MT', cursive;
             font-size: 36px;
-            color: #333;
+            color: #FFFFFF; /* Белый цвет */
             position: absolute;
-            top: -50px; /* Перемещаем надпись НАД фотографией */
+            bottom: -30px; /* Немного опускаем ниже фотографии */
             left: 50%;
             transform: translateX(-50%);
             white-space: nowrap;
             letter-spacing: 2px;
+            z-index: 2; /* Перекрывает фотографию */
+            transition: transform 0.3s ease-in-out;
+        }
+
+        /* Эффект смещения при наведении */
+        .author-name:hover {
+            transform: translateX(-50%) translateY(-5px);
+        }
+
+        /* Текст справа от фотографии */
+        .text-first-part {
+            font-size: 16px;
+            line-height: 1.5;
+            text-align: left;
+            max-width: calc(100% - 170px); /* Оставляем место для фото + отступ */
         }
 
         /* Вторая секция (центральный текст) */
@@ -144,9 +162,12 @@
         </ul>
     </nav>
 
+    <!-- Первая секция (фотография слева, текст справа) -->
     <section class="first-section fade-in">
-
+        <!-- Фотография -->
         <img class="profile-img" src="https://i.pinimg.com/736x/fd/e8/3f/fde83f0d56713e068ec56ed60de95a2b.jpg" alt="Kim Tehi">
+
+        <!-- Имя автора (частично перекрывает фотографию снизу) -->
         <div class="author-name">Kim Tehi</div>
 
         <!-- Текст справа от фотографии -->
@@ -155,6 +176,11 @@
             <p>Меня зовут Kim Tehi, и это мой блог о любви к танцу.</p>
         </div>
     </section>
+
+    <!-- Волнистые линии -->
+    <div class="wave-line"></div>
+    <div class="wave-line"></div>
+    <div class="wave-line"></div>
 
     <!-- Вторая секция (центральный текст) -->
     <section class="second-section fade-in">
