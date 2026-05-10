@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kim Tehi Dance Blog</title>
     <style>
-        /* Импортируем шрифты */
+
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
-        /* Базовые настройки */
+
         body {
             font-family: 'Montserrat', sans-serif;
             background-color: #FFFACD; /* Нежный жёлто-кремовый фон */
@@ -20,14 +20,14 @@
             line-height: 1.5;
         }
 
-        /* Верхняя шапка */
+
         header {
             position: relative;
             z-index: 1;
             margin-bottom: 20px;
         }
 
-        /* Навигация */
+
         nav {
             background: linear-gradient(to bottom, rgba(255,255,255,0.1), rgba(255,255,255,0.3));
             padding: 10px;
@@ -63,16 +63,16 @@
             color: #6B5B4A;
         }
 
-        /* Первая секция (фотография слева, текст справа) */
+
         .first-section {
             display: flex;
             align-items: center;
             justify-content: center;
             margin-bottom: 40px;
-            position: relative; /* Важно для позиционирования имени */
+            position: relative;
         }
 
-        /* Фотография */
+
         .profile-img {
             width: 150px;
             height: 150px;
@@ -81,59 +81,44 @@
             box-shadow: 0 0 10px rgba(0,0,0,0.3);
             border: 2px solid #FFF; /* Тонкая белая обводка */
             margin-right: 20px;
-            position: relative; /* Важен для эффекта перекрытия */
-            z-index: 1; /* Чуть меньше, чем у имени */
+            position: relative;
+            z-index: 1;
         }
 
-        /* Имя автора (слева, чуть ниже фотографии, частично перекрывает её) */
+
         .author-name {
             font-family: 'Brush Script MT', cursive;
             font-size: 36px;
             color: #333; /* Темный цвет */
             position: absolute;
-            top: 150px; /* Расположение чуть ниже фотографии */
+            top: 130px;
             left: 0;
             transform: translateX(0);
             white-space: nowrap;
             letter-spacing: 2px;
-            z-index: 2; /* Перекрывает фотографию */
+            z-index: 2;
             transition: transform 0.3s ease-in-out;
         }
 
-        /* Эффект смещения при наведении */
+
         .author-name:hover {
             transform: translateX(10px);
         }
 
-        /* Текст справа от фотографии */
+
         .text-first-part {
             font-size: 16px;
             line-height: 1.5;
             text-align: left;
-            max-width: calc(100% - 170px); /* Оставляем место для фото + отступ */
+            max-width: calc(100% - 170px);
         }
 
-        /* Вторая секция (центральный текст) */
+
         .second-section {
             margin-top: 40px;
             text-align: center;
         }
 
-        /* Волнистые линии */
-        .wave-line {
-            width: 100%;
-            height: 2px;
-            background-image: repeating-linear-gradient(
-                90deg,
-                transparent,
-                transparent 5px,
-                #CCC 5px,
-                #CCC 10px
-            );
-            margin: 20px 0;
-        }
-
-        /* Эффект плавного появления */
         @keyframes fadeIn {
             0% { opacity: 0; transform: translateY(-10px); }
             100% { opacity: 1; transform: translateY(0); }
@@ -145,46 +130,37 @@
     </style>
 </head>
 <body>
-    <!-- Верхняя шапка -->
+
     <header>
         <img src="https://sun9-84.userapi.com/s/v1/ig2/Xm3NSZ-JQi59Vw_f4k7KIDcmvF5NqXe1rfffspHG5c5bA0f4zVJh4iZ3Mis6IB3Ju8zdLLr5_xZW2ViRc7ElCSeU.jpg?quality=95&as=32x11,48x16,72x24,108x36,160x53,240x80,360x120,480=160,540x180,600x200&from=bu&u=y7DA0MWkC26nrul5007Rl6lPPBWYAKTwDOjFQr6Oou5c&cs=600x0"
               width="600" height="200">
     </header>
 
-    <!-- Навигационное меню -->
+
     <nav>
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Corner</a></li>
-            <li><a href="#">Media</a></li>
-            <li><a href="#">Other</a></li>
-            <li><a href="#">About</a></li>
+            <li><a href="#">Главная</a></li>
+            <li><a href="#">Обо мне</a></li>
+            <li><a href="#">Музыка</a></li>
+            <li><a href="#">Ссылки</a></li>
         </ul>
     </nav>
 
-    <!-- Первая секция (фотография слева, текст справа) -->
+
     <section class="first-section fade-in">
-        <!-- Фотография -->
+
         <div style="position: relative;">
             <img class="profile-img" src="https://i.pinimg.com/736x/fd/e8/3f/fde83f0d56713e068ec56ed60de95a2b.jpg" alt="Kim Tehi">
 
-            <!-- Имя автора (слева, чуть ниже фотографии, частично перекрывает её) -->
             <div class="author-name">Kim Tehi</div>
         </div>
 
-        <!-- Текст справа от фотографии -->
         <div class="text-first-part">
             <h2><em>Привет!</em></h2>
             <p>Меня зовут Kim Tehi, и это мой блог о любви к танцу.</p>
         </div>
     </section>
 
-    <!-- Волнистые линии -->
-    <div class="wave-line"></div>
-    <div class="wave-line"></div>
-    <div class="wave-line"></div>
-
-    <!-- Вторая секция (центральный текст) -->
     <section class="second-section fade-in">
         <p>
             Я не профессиональный хореограф, а просто человек, для которого танец — это способ самовыражения и источник энергии.<br>
