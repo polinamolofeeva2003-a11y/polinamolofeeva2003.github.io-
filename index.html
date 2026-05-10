@@ -3,15 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kim Tehi Dance Blog</title>
+    <title>Dance Blog | Kim Tehi</title>
     <style>
-        /* Импортируем шрифты */
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-        /* Базовые настройки */
         body {
             font-family: 'Montserrat', sans-serif;
-            background-color: #FFFACD; /* Нежный жёлто-кремовый фон */
+            background-color: #FFFACD; /* Кремово-жёлтый фон */
             color: #333;
             text-align: center;
             max-width: 600px;
@@ -19,6 +21,9 @@
             padding: 20px;
             line-height: 1.5;
         }
+
+        /* Шрифт для имени автора */
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
         /* Верхняя шапка */
         header {
@@ -63,42 +68,49 @@
             color: #6B5B4A;
         }
 
-        /* Первая секция (фотография слева, текст справа) */
-        .first-section {
+        /* Главный контейнер */
+        main {
             display: flex;
+            flex-direction: column;
             align-items: center;
-            justify-content: center;
-            margin-bottom: 40px;
         }
 
-        /* Фотография */
+        /* Центральная зона с фотографией и текстом */
+        .intro-section {
+            position: relative;
+            margin-bottom: 40px;
+            width: 100%;
+        }
+
+        /* Фотография с белой границей */
         .profile-img {
             width: 150px;
             height: 150px;
             object-fit: cover;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0,0,0,0.3);
-            border: 2px solid #FFF; /* Тонкая белая обводка */
-            margin-right: 20px;
+            border: 2px solid #FFF; /* Белая граница */
+            position: relative;
+            z-index: 1;
         }
 
-        /* Имя автора (над фотографией) */
+        /* Имя автора поверх фотографии */
         .author-name {
             font-family: 'Brush Script MT', cursive;
             font-size: 36px;
             color: #333;
             position: absolute;
-            top: -50px; /* Перемещаем надпись НАД фотографией */
+            bottom: -30px;
             left: 50%;
-            transform: translateX(-50%);
+            transform: translateX(-50%) scale(1);
             white-space: nowrap;
-            letter-spacing: 2px;
+            transition: transform 0.3s ease-in-out;
+            pointer-events: none; /* Чтобы не мешало взаимодействию с фото */
         }
 
-        /* Вторая секция (центральный текст) */
-        .second-section {
-            margin-top: 40px;
-            text-align: center;
+        /* Эффект смещения при наведении */
+        .intro-section:hover .author-name {
+            transform: translateX(-50%) scale(1.05) translateY(-5px);
         }
 
         /* Волнистые линии */
@@ -113,6 +125,15 @@
                 #CCC 10px
             );
             margin: 20px 0;
+        }
+
+        /* Описание блога */
+        .blog-intro {
+            font-size: 18px;
+            line-height: 1.6;
+            text-align: center;
+            max-width: 100%;
+            margin: 0 auto;
         }
 
         /* Эффект плавного появления */
@@ -144,25 +165,21 @@
         </ul>
     </nav>
 
-    <div class="intro-section fade-in">
+    <!-- Главная секция -->
+    <main>
+        <!-- Фотография и имя автора -->
+        <div class="intro-section fade-in">
             <img class="profile-img" src="https://i.pinimg.com/736x/fd/e8/3f/fde83f0d56713e068ec56ed60de95a2b.jpg" alt="Kim Tehi">
             <div class="author-name">Kim Tehi</div>
         </div>
 
-
-        <div class="text-first-part">
-            <h2><em>Привет!</em></h2>
-            <p>Меня зовут Kim Tehi, и это мой блог о любви к танцу.</p>
-        </div>
-    </section>
-
-    <section class="second-section fade-in">
-        <p>
+        <!-- Описание блога -->
+        <p class="blog-intro fade-in">
+            Меня зовут Kim Tehi, и это мой блог о любви к танцу.<br>
             Я не профессиональный хореограф, а просто человек, для которого танец — это способ самовыражения и источник энергии.<br>
             Здесь я делюсь своими впечатлениями, анализирую интересные хореографии и рассказываю о своём пути в мире движения.<br>
             Подписывайтесь, если вам близка эта страсть!
         </p>
-    </section>
+    </main>
 </body>
 </html>
-
