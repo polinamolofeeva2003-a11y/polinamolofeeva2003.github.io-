@@ -85,15 +85,15 @@
             z-index: 1; /* Чуть меньше, чем у имени */
         }
 
-        /* Имя автора (прямо под фотографией, частично перекрывает её) */
+        /* Имя автора (слева, чуть ниже фотографии, частично перекрывает её) */
         .author-name {
             font-family: 'Brush Script MT', cursive;
             font-size: 36px;
-            color: #FFFFFF; /* Белый цвет */
+            color: #333; /* Темный цвет */
             position: absolute;
-            bottom: -30px; /* Немного опускаем ниже фотографии */
-            left: 50%;
-            transform: translateX(-50%);
+            top: 150px; /* Расположение чуть ниже фотографии */
+            left: 0;
+            transform: translateX(0);
             white-space: nowrap;
             letter-spacing: 2px;
             z-index: 2; /* Перекрывает фотографию */
@@ -102,7 +102,7 @@
 
         /* Эффект смещения при наведении */
         .author-name:hover {
-            transform: translateX(-50%) translateY(-5px);
+            transform: translateX(10px);
         }
 
         /* Текст справа от фотографии */
@@ -147,7 +147,7 @@
 <body>
     <!-- Верхняя шапка -->
     <header>
-        <img src="https://sun9-84.userapi.com/s/v1/ig2/Xm3NSZ-JQi59Vw_f4k7KIDcmvF5NqXe1rfffspHG5c5bA0f4zVJh4iZ3Mis6IB3Ju8zdLLr5_xZW2ViRc7ElCSeU.jpg?quality=95&as=32x11,48x16,72x24,108x36,160x53,240x80,360x120,480x160,540x180,600x200&from=bu&u=y7DA0MWkC26nrul5007Rl6lPPBWYAKTwDOjFQr6Oou5c&cs=600x0"
+        <img src="https://sun9-84.userapi.com/s/v1/ig2/Xm3NSZ-JQi59Vw_f4k7KIDcmvF5NqXe1rfffspHG5c5bA0f4zVJh4iZ3Mis6IB3Ju8zdLLr5_xZW2ViRc7ElCSeU.jpg?quality=95&as=32x11,48x16,72x24,108x36,160x53,240x80,360x120,480=160,540x180,600x200&from=bu&u=y7DA0MWkC26nrul5007Rl6lPPBWYAKTwDOjFQr6Oou5c&cs=600x0"
               width="600" height="200">
     </header>
 
@@ -165,10 +165,35 @@
     <!-- Первая секция (фотография слева, текст справа) -->
     <section class="first-section fade-in">
         <!-- Фотография -->
-        <img class="profile-img" src="https://i.pinimg.com/736x/fd/e8/3f/fde83f0d56713e068ec56ed60de95a2b.jpg" alt="Kim Tehi">
+        <div style="position: relative;">
+            <img class="profile-img" src="https://i.pinimg.com/736x/fd/e8/3f/fde83f0d56713e068ec56ed60de95a2b.jpg" alt="Kim Tehi">
 
-        <!-- Имя автора (частично перекрывает фотографию снизу) -->
-        <div class="author-name">Kim Tehi</div>
+            <!-- Имя автора (слева, чуть ниже фотографии, частично перекрывает её) -->
+            <div class="author-name">Kim Tehi</div>
+        </div>
+
+        <!-- Текст справа от фотографии -->
+        <div class="text-first-part">
+            <h2><em>Привет!</em></h2>
+            <p>Меня зовут Kim Tehi, и это мой блог о любви к танцу.</p>
+        </div>
+    </section>
+
+    <!-- Волнистые линии -->
+    <div class="wave-line"></div>
+    <div class="wave-line"></div>
+    <div class="wave-line"></div>
+
+    <!-- Вторая секция (центральный текст) -->
+    <section class="second-section fade-in">
+        <p>
+            Я не профессиональный хореограф, а просто человек, для которого танец — это способ самовыражения и источник энергии.<br>
+            Здесь я делюсь своими впечатлениями, анализирую интересные хореографии и рассказываю о своём пути в мире движения.<br>
+            Подписывайтесь, если вам близка эта страсть!
+        </p>
+    </section>
+</body>
+</html>
 
         <!-- Текст справа от фотографии -->
         <div class="text-first-part">
