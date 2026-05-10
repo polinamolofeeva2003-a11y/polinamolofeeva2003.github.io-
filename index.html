@@ -1,190 +1,168 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dance Blog | Kim Tehi</title>
+    <title>Whispers & Wonders</title>
+    <link rel="stylesheet" type="text/css" href="index/style.css">
+    <link href="https://i.pinimg.com/736x/ca/fb/dd/cafbdd686129d7d0ee5b5b59f86eece0.jpg" rel="icon">
     <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
+        /* Общий стиль */
         body {
-            font-family: 'Montserrat', sans-serif;
-            background-color: #FFFACD; /* Кремово-жёлтый фон */
-            color: #333;
-            text-align: center;
+            background-color: #FFFACD; /* Нежный кремово-жёлтый фон */
             max-width: 600px;
-            margin: 0 auto;
-            padding: 20px;
-            line-height: 1.5;
-        }
-
-        /* Шрифт для имени автора */
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
-
-        /* Верхняя шапка */
-        header {
-            position: relative;
-            z-index: 1;
-            margin-bottom: 20px;
-        }
-
-        /* Навигация */
-        nav {
-            background: linear-gradient(to bottom, rgba(255,255,255,0.1), rgba(255,255,255,0.3));
-            padding: 10px;
-            border-radius: 15px;
-            box-shadow: inset 0 0 10px rgba(0,0,0,0.2);
-            margin-bottom: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        nav li {
-            margin: 0 15px;
-        }
-
-        nav a {
-            text-decoration: none;
+            word-wrap: break-word;
+            margin-left: auto;
+            margin-right: auto;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
             color: #333;
-            font-weight: bold;
-            transition: color 0.3s ease-in-out;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
         }
 
-        nav a:hover {
-            color: #6B5B4A;
-        }
+Копировать
+    /* Заголовочная часть */
+    header {
+        position: relative;
+        z-index: 1;
+        margin-bottom: 20px;
+    }
 
-        /* Главный контейнер */
-        main {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+    /* Навигационное меню */
+    nav {
+        background: linear-gradient(to bottom, rgba(255,255,255,0.1), rgba(255,255,255,0.3));
+        padding: 10px;
+        border-radius: 15px;
+        box-shadow: inset 0 0 10px rgba(0,0,0,0.2);
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
-        /* Центральная зона с фотографией и текстом */
-        .intro-section {
-            position: relative;
-            margin-bottom: 40px;
-            width: 100%;
-        }
+    nav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
-        /* Фотография с белой границей */
-        .profile-img {
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.3);
-            border: 2px solid #FFF; /* Белая граница */
-            position: relative;
-            z-index: 1;
-        }
+    nav li {
+        margin: 0 15px;
+    }
 
-        /* Имя автора поверх фотографии */
-        .author-name {
-            font-family: 'Brush Script MT', cursive;
-            font-size: 36px;
-            color: #333;
-            position: absolute;
-            bottom: -30px;
-            left: 50%;
-            transform: translateX(-50%) scale(1);
-            white-space: nowrap;
-            transition: transform 0.3s ease-in-out;
-            pointer-events: none; /* Чтобы не мешало взаимодействию с фото */
-        }
+    nav a {
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+        transition: color 0.3s ease-in-out;
+    }
 
-        /* Эффект смещения при наведении */
-        .intro-section:hover .author-name {
-            transform: translateX(-50%) scale(1.05) translateY(-5px);
-        }
+    nav a:hover {
+        color: #6B5B4A;
+    }
 
-        /* Волнистые линии */
-        .wave-line {
-            width: 100%;
-            height: 2px;
-            background-image: repeating-linear-gradient(
-                90deg,
-                transparent,
-                transparent 5px,
-                #CCC 5px,
-                #CCC 10px
-            );
-            margin: 20px 0;
-        }
+    /* Основная область */
+    main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
 
-        /* Описание блога */
-        .blog-intro {
-            font-size: 18px;
-            line-height: 1.6;
-            text-align: center;
-            max-width: 100%;
-            margin: 0 auto;
-        }
+    /* Контентный блок */
+    .content-section {
+        background: linear-gradient(to bottom, rgba(255,255,255,0.1), rgba(255,255,255,0.3));
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: inset 0 0 10px rgba(0,0,0,0.2);
+        margin-bottom: 20px;
+        transition: background 0.3s ease-in-out;
+    }
 
-        /* Эффект плавного появления */
-        @keyframes fadeIn {
-            0% { opacity: 0; transform: translateY(-10px); }
-            100% { opacity: 1; transform: translateY(0); }
-        }
+    /* Левый блок с фотографией и текстом */
+    .left-block {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        margin-bottom: 20px;
+        width: 100%; /* Выравнивание по ширине контейнера */
+    }
 
-        .fade-in {
-            animation: fadeIn 1s ease-in-out forwards;
-        }
-    </style>
+    /* Фотография */
+    .photo {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+
+    /* Текст рядом с фотографией */
+    .text-next-to-photo {
+        font-size: 16px;
+        line-height: 1.5;
+        text-align: left;
+        max-width: calc(100% - 170px); /* Оставляем место для фото + отступ */
+    }
+
+    /* Нижний центральный текст */
+    .bottom-central-text {
+        font-size: 18px;
+        line-height: 1.6;
+        text-align: center;
+        max-width: 100%; /* Выравнивание по центру всей страницы */
+        margin: 0 auto; /* Центровка по горизонтали */
+    }
+
+    /* Эффект плавного появления */
+    @keyframes fadeIn {
+        0% { opacity: 0; transform: translateY(-10px); }
+        100% { opacity: 1; transform: translateY(0); }
+    }
+
+    .fade-in {
+        animation: fadeIn 1s ease-in-out forwards;
+    }
+</style>
 </head>
 <body>
-    <!-- Верхняя шапка -->
     <header>
         <img src="https://sun9-84.userapi.com/s/v1/ig2/Xm3NSZ-JQi59Vw_f4k7KIDcmvF5NqXe1rfffspHG5c5bA0f4zVJh4iZ3Mis6IB3Ju8zdLLr5_xZW2ViRc7ElCSeU.jpg?quality=95&as=32x11,48x16,72x24,108x36,160x53,240x80,360x120,480x160,540x180,600x200&from=bu&u=y7DA0MWkC26nrul5007Rl6lPPBWYAKTwDOjFQr6Oou5c&cs=600x0"
               width="600" height="200">
     </header>
 
-    <!-- Навигационное меню -->
-    <nav>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Corner</a></li>
-            <li><a href="#">Media</a></li>
-            <li><a href="#">Other</a></li>
-            <li><a href="#">About</a></li>
-        </ul>
-    </nav>
+Копировать
+<nav>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Corner</a></li>
+        <li><a href="#">Media</a></li>
+        <li><a href="#">Other</a></li>
+        <li><a href="#">About</a></li>
+    </ul>
+</nav>
 
-    <!-- Главная секция -->
-    <main>
-        <!-- Фотография и имя автора -->
-        <div class="intro-section fade-in">
-            <img class="profile-img" src="https://i.pinimg.com/736x/fd/e8/3f/fde83f0d56713e068ec56ed60de95a2b.jpg" alt="Kim Tehi">
-            <div class="author-name">Kim Tehi</div>
+<main>
+    <section class="content-section fade-in">
+        <div class="left-block">
+            <img class="photo" src="https://i.pinimg.com/736x/fd/e8/3f/fde83f0d56713e068ec56ed60de95a2b.jpg" alt="Field of Flowers">
+
+
+            <div class="text-next-to-photo">
+                <h2><em>Привет!</em></h2>
+                <p>Меня зовут Kim Tehi, и это мой блог о любви к танцу.<br></p>
+            </div>
         </div>
-
-        <!-- Волнистые линии -->
-        <div class="wave-line"></div>
-        <div class="wave-line"></div>
-        <div class="wave-line"></div>
-
-        <!-- Описание блога -->
-        <p class="blog-intro fade-in">
-            Меня зовут Kim Tehi, и это мой блог о любви к танцу.<br>
-            Я не профессиональный хореограф, а просто человек, для которого танец — это способ самовыражения и источник энергии.<br>
+        <p class="bottom-central-text">
+            Я не профессиональный хореограф, а просто человек, для которого танец — это способ самовыражения и источник энергии.
             Здесь я делюсь своими впечатлениями, анализирую интересные хореографии и рассказываю о своём пути в мире движения.<br>
-            Подписывайтесь, если вам близка эта страсть!
+
+            Подписывайтесь, если вам близка эта страсть.
         </p>
-    </main>
+    </section>
+</main>
 </body>
 </html>
+
