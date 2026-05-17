@@ -1,44 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kim Tehi Dance Blog</title>
-    <link href="https://i.pinimg.com/736x/ca/fb/dd/cafbdd686129d7d0ee5b5b59f86eece0.jpg" rel="icon">
+
+    <link href="https://sun9-88.userapi.com/s/v1/ig2/h7G8uQGR8KH2G1BiVeP-EkyXvL1areO9saxpwDOvJziWzuVmMzYOedqeNTFuofQAgbptao_9A4tSHuEd-hxnlDdC.jpg?quality=95&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,736x414&from=bu&cs=736x0" rel="icon">
+
     <style>
-        /* Импортируем шрифты */
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap');
 
-        /* Базовые настройки */
-        body {
-            font-family: 'Montserrat', sans-serif;
-            background-color: #FFFACD; /* Нежный жёлто-кремовый фон */
-            color: #fff; /* Весь текст белый */
-            text-align: center;
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 20px;
-            line-height: 1.5;
-            text-shadow: 1px 1px 4px rgba(0,0,0,0.5); /* Сильная тёмная тень для всего текста */
+        * {
+            box-sizing: border-box;
         }
 
-        /* Верхняя шапка */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', Arial, sans-serif;
+    color: #edf4ff;
+    text-align: center;
+    line-height: 1.5;
+
+    background-color: #080b12;
+    background-image: url("https://i.pinimg.com/originals/02/36/ab/0236ab43d35ff3b91872b9fd50d96312.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.75);
+}
+
+.page {
+    max-width: 650px;
+    margin: 24px auto;
+    padding: 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(5, 9, 17, 0.88),
+            rgba(14, 29, 48, 0.86)
+        );
+
+    border-left: 1px solid rgba(230, 240, 255, 0.24);
+    border-right: 1px solid rgba(230, 240, 255, 0.24);
+
+    border-radius: 24px;
+    overflow: hidden;
+
+    box-shadow:
+        0 0 35px rgba(0, 0, 0, 0.75),
+        inset 0 0 35px rgba(255, 255, 255, 0.04);
+}
+
         header {
-            position: relative;
-            z-index: 1;
-            margin-bottom: 20px;
+            margin-bottom: 14px;
+            background-color: #05070c;
+            overflow: hidden;
+            border: 1px solid rgba(220, 236, 255, 0.25);
+            box-shadow: 0 10px 28px rgba(0, 0, 0, 0.55);
         }
 
-        /* Навигация */
+        header img {
+            display: block;
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            filter: contrast(1.05) saturate(0.85) brightness(0.98);
+        }
+
         nav {
-            background: linear-gradient(to bottom, rgba(255,255,255,0.1), rgba(255,255,255,0.3));
+            background:
+                linear-gradient(to bottom, rgba(245, 250, 255, 0.18), rgba(10, 20, 34, 0.75));
             padding: 10px;
-            border-radius: 15px;
-            box-shadow: inset 0 0 10px rgba(0,0,0,0.2);
+            border-radius: 12px;
             margin-bottom: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            border: 1px solid rgba(230, 240, 255, 0.28);
+            box-shadow: inset 0 0 14px rgba(0, 0, 0, 0.35);
         }
 
         nav ul {
@@ -48,143 +87,220 @@
             display: flex;
             justify-content: center;
             align-items: center;
-        }
-
-        nav li {
-            margin: 0 15px;
+            flex-wrap: wrap;
+            gap: 18px;
         }
 
         nav a {
             text-decoration: none;
-            color: inherit; /* Наследуем белый цвет */
-            font-weight: bold;
-            transition: color 0.3s ease-in-out;
+            color: #f4f8ff;
+            font-size: 14px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: 0.25s;
         }
 
         nav a:hover {
-            color: #6B5B4A;
-        }
+    color: #55d8ff;
+    text-shadow:
+        0 0 4px rgba(85, 216, 255, 0.9),
+        0 0 10px rgba(85, 216, 255, 0.65);
+}
 
-        /* Первая секция (фотография слева, текст справа) */
         .first-section {
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 40px;
+            gap: 22px;
+            margin-bottom: 24px;
             position: relative;
         }
 
-        /* Фотография */
+        .photo-wrap {
+            position: relative;
+            flex: 0 0 auto;
+        }
+
         .profile-img {
-            width: 150px;
-            height: 150px;
+            width: 155px;
+            height: 170px;
             object-fit: cover;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.3);
-            border: 2px solid #FFF; /* Тонкая белая обводка */
-            margin-right: 20px;
-            position: relative;
-            z-index: 1;
+            display: block;
+            border-radius: 6px;
+            border: 2px solid rgba(240, 248, 255, 0.85);
+            box-shadow:
+                8px 8px 0 rgba(20, 42, 70, 0.75),
+                0 8px 22px rgba(0, 0, 0, 0.5);
+            filter: grayscale(0.12) contrast(1.08) saturate(0.82);
         }
 
-        /* Имя автора (слева, чуть ниже фотографии, частично перекрывает её) */
         .author-name {
-            font-family: 'Brush Script MT', cursive;
-            font-size: 36px;
-            color: inherit; /* Наследуем белый цвет */
-            position: absolute;
-            top: 130px; /* Расположение чуть ниже фотографии, заходя на неё */
-            left: 0;
-            transform: translateX(0);
-            white-space: nowrap;
-            letter-spacing: 2px;
-            z-index: 2;
-            transition: transform 0.3s ease-in-out;
-        }
+    position: absolute;
+    left: 50%;
+    bottom: 0px;
+    transform: translateX(-50%) rotate(-5deg);
+    white-space: nowrap;
 
-        /* Эффект смещения при наведении */
-        .author-name:hover {
-            transform: translateX(10px);
-        }
+    font-family: "TEMPUS SANS ITC", "Arial Black", sans-serif;
+    font-size: 31px;
+    line-height: 1;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 
-        /* Текст справа от фотографии */
+    color: #8fe6ff;
+    -webkit-text-stroke: 1px #55d8ff;
+    text-shadow:
+        2px 2px 0 rgba(0, 0, 0, 0.85),
+        0 0 7px rgba(143, 230, 255, 0.65);
+}
+
         .text-first-part {
             font-size: 16px;
             line-height: 1.5;
             text-align: left;
-            max-width: calc(100% - 170px);
+            max-width: 360px;
         }
 
-        /* Вторая секция (центральный текст) */
-        .second-section {
-            margin-top: 40px;
-            text-align: center;
+        .text-first-part h2 {
+            margin: 0 0 10px;
+            font-size: 30px;
+            color: #ffffff;
+            letter-spacing: 1px;
         }
 
-        /* Волнистые линии */
-        .wave-line {
+        .text-first-part p {
+    margin: 0;
+    color: #e4edf8;
+    background: rgba(1, 5, 12, 0.68);
+    padding: 10px 12px;
+    border-radius: 10px;
+}
+
+        .divider {
             width: 100%;
-            height: 2px;
-            background-image: repeating-linear-gradient(
-                90deg,
-                transparent,
-                transparent 5px,
-                #CCC 5px,
-                #CCC 10px
-            );
-            margin: 20px 0;
+            height: 34px;
+            margin: 18px auto 24px;
+            background-image: url("https://blob.gifcities.org/gifcities/ELSTZANMMG6MJD2QQOBJ4LFKH7ZYPJIJ.gif");
+            background-repeat: repeat-x;
+            background-size: auto 34px;
+            background-position: center;
+            opacity: 0.85;
+            filter: grayscale(0.2) saturate(0.85) brightness(1.15);
         }
 
+        .second-section {
+    margin-top: 0;
+    padding: 22px;
+    text-align: center;
+    border-radius: 14px;
+    background: rgba(1, 5, 12, 0.76);
+    border: 1px solid rgba(218, 235, 255, 0.16);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.48);
+}
+
+        .second-section p {
+            margin: 0;
+            color: #e7f1ff;
+            font-size: 15px;
+        }
 
         @keyframes fadeIn {
-            0% { opacity: 0; transform: translateY(-10px); }
-            100% { opacity: 1; transform: translateY(0); }
+            0% {
+                opacity: 0;
+                transform: translateY(-8px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .fade-in {
-            animation: fadeIn 1s ease-in-out forwards;
+            animation: fadeIn 0.9s ease-in-out forwards;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 12px;
+            }
+
+            header img {
+                height: 160px;
+            }
+
+            .first-section {
+                flex-direction: column;
+                gap: 18px;
+            }
+
+            .text-first-part {
+                max-width: 100%;
+                text-align: center;
+            }
+
+            .text-first-part p {
+                border-left: none;
+            }
+
+            nav ul {
+                gap: 12px;
+            }
+
+            nav a {
+                font-size: 13px;
+            }
         }
     </style>
 </head>
+
 <body>
+    <div class="page">
 
     <header>
-        <img src="https://sun9-84.userapi.com/s/v1/ig2/Xm3NSZ-JQi59Vw_f4k7KIDcmvF5NqXe1rfffspHG5c5bA0f4zVJh4iZ3Mis6IB3Ju8zdLLr5_xZW2ViRc7ElCSeU.jpg?quality=95&as=32x11,48x16,72x24,108x36,160x53,240x80,360x120,480=160,540x180,600x200&from=bu&u=y7DA0MWkC26nrul5007Rl6lPPBWYAKTwDOjFQr6Oou5c&cs=600x0"
-              width="600" height="200">
+        <img src="https://psv4.userapi.com/s/v1/d2/SFfLdeyDfiDX8j-7ohdsVx1sGTt6mxDLG4fSLjD1yc3Y5Ak55PggzIAxhaykGbh88vokooiNIRLaZ2dLSm4lkvdLC-gFIXJ19-6Kqhces6XF0f4-9nXXyFECK9XiYQ3MZjvdsu3Pnj5X/Utool-20260511-192653018.jpg" alt="Баннер блога Kim Tehi">
     </header>
-
 
     <nav>
         <ul>
             <li><a href="#">Главная</a></li>
-            <li><a href="#">Обо мне</a></li>
-            <li><a href="#">Музыка</a></li>
-            <li><a href="#">Ссылки</a></li>
+            <li><a href="./about.html">Обо мне</a></li>
+            <li><a href="./music.html">Музыка</a></li>
+            <li><a href="./links.html">Ссылки</a></li>
         </ul>
     </nav>
 
+    <section class="first-section fade-in" id="about">
 
-    <section class="first-section fade-in">
-
-        <div style="position: relative;">
-            <img class="profile-img" src="https://i.pinimg.com/736x/fd/e8/3f/fde83f0d56713e068ec56ed60de95a2b.jpg" alt="Kim Tehi">
+        <div class="photo-wrap">
+            <img class="profile-img" src="https://psv4.userapi.com/s/v1/d2/eBzScDxIgCxJutnwP6ixOfviS-5z43maIuxmY4cEF0QlKrqSspEQJjNzOaPcX8LypJBFrOfEmjTcPcBLVCL5oN-DzHrFssFy1Snmw0F0R7iVD2L8c1w2xwrHW3hM6Q4iwF9WLF6Dy7jz/IMG_20260517_152419.jpg" alt="Kim Tehi">
             <div class="author-name">Kim Tehi</div>
         </div>
 
-
         <div class="text-first-part">
             <h2><em>Привет!</em></h2>
-            <p>Меня зовут Kim Tehi, и это мой блог о любви к танцу.</p>
+            <p>
+                Меня зовут Kim Tehi, и это мой блог о любви к танцу,
+                хип-хопу и свободному движению под музыку.
+            </p>
         </div>
+
     </section>
 
+    <div class="divider"></div>
 
-    <section class="second-section fade-in">
+    <section class="second-section fade-in" id="music">
         <p>
-            Я не профессиональный хореограф, а просто человек, для которого танец — это способ самовыражения и источник энергии.<br>
-            Здесь я делюсь своими впечатлениями, анализирую интересные хореографии и рассказываю о своём пути в мире движения.<br>
+            Я не профессиональный хореограф, а просто человек, для которого танец —
+            это способ самовыражения и источник энергии.<br>
+            Здесь я делюсь своими впечатлениями, анализирую интересные хореографии
+            и рассказываю о своём пути в мире движения.<br>
             Подписывайтесь, если вам близка эта страсть!
         </p>
     </section>
+</div>
+
 </body>
 </html>
